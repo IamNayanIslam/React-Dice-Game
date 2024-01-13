@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledSelectedNumberContainer = styled.div`
   display: flex;
@@ -32,12 +32,15 @@ export const StyledBox = styled.div`
   color: #000;
   cursor: pointer;
   transition: 0.3s ease all;
-
-  background-color: ${({ $isSelected }) => ($isSelected ? "black" : "white")};
-  color: ${({ $isSelected }) => ($isSelected ? "white" : "black")};
   &:hover {
     background: #000;
     color: #fff;
     transition: 0.3s ease all;
   }
+  ${({ $isSelected }) =>
+    $isSelected &&
+    css`
+      background: black;
+      color: white;
+    `}
 `;
