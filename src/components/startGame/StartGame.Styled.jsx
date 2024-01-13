@@ -39,3 +39,12 @@ export const StyledButton = styled.button`
     transition: 0.3s ease-in background;
   }
 `;
+
+export const BlackButton = styled(StyledButton)`
+  background: #000;
+  color: #fff;
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+`;
