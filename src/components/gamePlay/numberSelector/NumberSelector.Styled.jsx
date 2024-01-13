@@ -5,8 +5,15 @@ export const StyledSelectedNumberContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: end;
-  gap: 30px;
+  gap: 10px;
 
+  p.error {
+    color: #ff0c0c;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
   .flex {
     display: flex;
     gap: 24px;
