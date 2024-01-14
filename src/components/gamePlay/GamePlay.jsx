@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StyledMain } from "./GamePlay.Styled";
 import NumberSelector from "./numberSelector/NumberSelector";
 import RoleDice from "./roleDice/RoleDice";
 import TotalScore from "./totalScore/TotalScore";
 import { BlackButton, StyledButton } from "../startGame/StartGame.Styled";
 import Rules from "../gameRules/Rules";
+import { getDataFromLocalStorage } from "../../Utility/utilities";
 
 const GamePlay = () => {
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(getDataFromLocalStorage("score") || 0);
+
+  useEffect(() => {
+    localStorage.setItem("score", JSON.stringify(score));
+  }, [score]);
+
   const [selectedNumber, setSelectedNumber] = useState(null);
   const [currentDice, setCurrentDice] = useState(1);
   const [error, setError] = useState("");
