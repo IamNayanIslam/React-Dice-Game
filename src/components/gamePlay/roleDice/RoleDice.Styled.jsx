@@ -8,6 +8,7 @@ export const StyledDiceContainer = styled.div`
 
   img {
     cursor: pointer;
+    width: 200px;
   }
 
   p {

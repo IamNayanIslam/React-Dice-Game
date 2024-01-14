@@ -6,15 +6,50 @@ export const StyledContainer = styled.div`
   display: flex;
   align-items: center;
   height: 100vh;
+
+  @media screen and (max-width: 840px) {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .img {
     img {
       width: 649px;
     }
   }
+
+  @media screen and (max-width: 840px) {
+    .img {
+      img {
+        width: 100%;
+        margin-top: 60px;
+      }
+    }
+  }
+
   .content {
     h1 {
       font-size: 76px;
       white-space: nowrap;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .content {
+      h1 {
+        font-size: 46px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 840px) {
+    .content {
+      h1 {
+        font-size: 76px;
+        white-space: nowrap;
+      }
     }
   }
 `;

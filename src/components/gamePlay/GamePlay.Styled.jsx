@@ -8,6 +8,13 @@ export const StyledMain = styled.main`
     justify-content: space-around;
   }
 
+  @media screen and (max-width: 500px) {
+    .top-section {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
   .buttons {
     margin-top: 36px;
     margin-bottom: 64px;
