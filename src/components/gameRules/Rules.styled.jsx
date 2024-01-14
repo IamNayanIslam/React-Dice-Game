@@ -10,6 +10,11 @@ export const RulesContainer = styled.div`
   gap: 24px;
   background: #fbf1f1;
   border-radius: 5px;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+
   h2 {
     color: #000;
     font-size: 24px;
