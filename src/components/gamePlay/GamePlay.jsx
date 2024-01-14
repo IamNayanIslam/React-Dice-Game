@@ -6,8 +6,9 @@ import TotalScore from "./totalScore/TotalScore";
 import { BlackButton, StyledButton } from "../startGame/StartGame.Styled";
 import Rules from "../gameRules/Rules";
 import { getDataFromLocalStorage } from "../../Utility/utilities";
+import { AiFillCloseCircle } from "react-icons/ai";
 
-const GamePlay = () => {
+const GamePlay = ({ toggleIsGameStarted }) => {
   const [score, setScore] = useState(getDataFromLocalStorage("score") || 0);
 
   useEffect(() => {
@@ -49,6 +50,10 @@ const GamePlay = () => {
   return (
     <>
       <StyledMain>
+        <AiFillCloseCircle
+          className="close-game"
+          onClick={toggleIsGameStarted}
+        />
         <div className="top-section">
           <TotalScore score={score} />
           <NumberSelector

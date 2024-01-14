@@ -19,7 +19,7 @@ const MyApp = () => {
     <>
       <div>
         {isGameStarted ? (
-          <GamePlay />
+          <GamePlay toggleIsGameStarted={toggleIsGameStarted} />
         ) : (
           <StartGame toggle={toggleIsGameStarted} />
         )}
